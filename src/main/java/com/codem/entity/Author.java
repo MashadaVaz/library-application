@@ -26,10 +26,10 @@ public class Author {
 
     @NotNull(message = "Enter the author name!")
     @NotEmpty(message = "Enter the author name!")
-    private String aname;
+    private String aName;
 
     @Email(message = "Enter a valid email")
-    private String aemail;
+    private String aEmail;
 
     @ManyToMany(mappedBy = "authors")
     private List<Book> books = new ArrayList<>();

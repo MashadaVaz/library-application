@@ -9,5 +9,5 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface BookRepo extends JpaRepository<Book, Integer> {
-//    List<Book> findByBname(@Param("bname") String bname);
+    Book findByName(String name);
 }

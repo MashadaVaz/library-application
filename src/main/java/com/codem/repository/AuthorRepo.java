@@ -9,6 +9,5 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface AuthorRepo extends JpaRepository<Author, Integer> {
-//    List<Author> findByAname(@Param("aname") String aname);
 }
 

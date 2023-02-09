@@ -23,7 +23,7 @@ public class Book {
 
     @NotNull(message = "Enter the book name!")
     @NotEmpty(message = "Enter the book name!")
-    private String bname;
+    private String name;
 
 //    @OneToOne
 //    private Author author = new Author();
