@@ -1,4 +1,4 @@
-package com.codem.configuration;
+package com.codem.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -8,7 +8,7 @@ import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 @Configuration
-public class ValidatorConfiguration implements RepositoryRestConfigurer {
+public class ValidatorConfig implements RepositoryRestConfigurer {
 
     @Bean
     @Primary
