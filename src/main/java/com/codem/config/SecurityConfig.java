@@ -24,7 +24,7 @@ public class SecurityConfig {
     @Autowired
     private JwtFilter jwtFilter;
 
-    private static final String[] ALL_LIST={
+    private static final String[] PUBLIC_LIST={
             "/books",
             "/user/add", "/user/auth"
     };
@@ -41,7 +41,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.csrf().disable()
-                .authorizeHttpRequests().requestMatchers(ALL_LIST).permitAll()
+                .authorizeHttpRequests().requestMatchers(PUBLIC_LIST).permitAll()
                 .and()
                 .authorizeHttpRequests().requestMatchers(ADMIN_LIST).hasAuthority("ROLE_ADMIN")
                 .and().headers().frameOptions().disable()
